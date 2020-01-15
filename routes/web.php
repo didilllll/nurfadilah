@@ -20,6 +20,28 @@ Route::get('tampil', function () {
 
 
 
+Route::get('contoh','BukuController@latihan');
+
+Route::get('profil','BukuController@latihan2');
+
+Route::get('profil2','BukuController@latihan3');
+
+Route::get('profil3','BukuController@latihan4');
+
+//basic
+Route::get('pesan/{menu?}','BukuController@pesan');
+// menggunakan optional
+Route::get('pesan/{menu}/{minum?}/{harga?}','BukuController@pesan');
+
+//crud
+Route::get('get-buku','BukuuController@index');
+Route::get('create-buku2','BukuuController@buat_)data');
+Route::get('get-buku/{id}','BukuuController@show');
+Route::get('delete-buku/{id}','BukuuController@delete');
+Route::get('update-buku/{id}','BukuuController@update');
+
+Route::get('hitung-buku','Bukuontroller@hitungbuku');
+
 Route::get('/', function () {
     return 'haii';
 });
